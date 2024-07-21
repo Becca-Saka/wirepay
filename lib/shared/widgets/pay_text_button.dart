@@ -39,6 +39,7 @@ class PayTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: height.h,
+      width: width?.w,
       child: TextButton(
         onPressed: onPressed,
         style: TextButton.styleFrom(padding: padding),

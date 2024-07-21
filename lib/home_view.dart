@@ -436,6 +436,7 @@ class PayBorder extends StatelessWidget {
   final double? height;
   final Color? color;
   final double? radius;
+  final BorderRadiusGeometry? borderRadius;
   final EdgeInsets? padding;
   final Widget child;
   const PayBorder({
@@ -445,6 +446,7 @@ class PayBorder extends StatelessWidget {
     this.color,
     this.radius,
     this.padding,
+    this.borderRadius,
     required this.child,
   });
 
@@ -455,7 +457,7 @@ class PayBorder extends StatelessWidget {
       height: height,
       padding: padding ?? const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(radius ?? 12),
+        borderRadius: borderRadius ?? BorderRadius.circular(radius ?? 12),
         color: color ?? Colors.white,
       ),
       child: child,
