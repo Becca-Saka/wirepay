@@ -4,13 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'app_colors.dart';
 
 abstract class AppTextStyle {
-  static const String fontFamily = 'NunitoSans';
-  static const String fontFamilySecondary = 'BricolageGrotesque';
-  static const String fontFamilyTertiary = 'AvenirLTStd';
+  static const String fontNunito = 'NunitoSans';
+  static const String fontBrico = 'BricolageGrotesque';
+  static const String fontAvenir = 'AvenirLTStd';
 
   /// Base text style
   static const TextStyle _baseTextStyle = TextStyle(
-    fontFamily: 'NunitoSans',
+    fontFamily: AppTextStyle.fontNunito,
     fontWeight: AppFontWeight.regular,
     color: AppColors.darkText,
     letterSpacing: -0.2,
@@ -37,17 +37,19 @@ abstract class AppTextStyle {
   ///NunitoSans medium 14
   static TextStyle get medium14 => regular10.copyWith(
         fontWeight: AppFontWeight.medium,
-        fontSize: 14.spMin,
+        fontSize: 14.sp,
       );
 
   ///NunitoSans medium 16
   static TextStyle get medium16 => regular10.copyWith(
         fontWeight: AppFontWeight.medium,
-        fontSize: 16.spMin,
+        fontSize: 16.sp,
       );
 
   ///NunitoSans 14
-  static TextStyle get regular14 => _baseTextStyle.copyWith(fontSize: 14);
+  static TextStyle get regular14 => _baseTextStyle.copyWith(
+        fontSize: 14.sp,
+      );
 
   ///NunitoSans light 14
   static TextStyle get light14 =>
@@ -62,7 +64,9 @@ abstract class AppTextStyle {
       regular14.copyWith(fontWeight: AppFontWeight.bold);
 
   ///NunitoSans 15
-  static TextStyle get regular15 => _baseTextStyle.copyWith(fontSize: 15);
+  static TextStyle get regular15 => _baseTextStyle.copyWith(
+        fontSize: 15.sp,
+      );
 
   ///NunitoSans medium 15
   static TextStyle get medium15 =>
@@ -73,7 +77,9 @@ abstract class AppTextStyle {
       regular15.copyWith(fontWeight: AppFontWeight.semiBold);
 
   ///NunitoSans 16
-  static TextStyle get regular16 => _baseTextStyle.copyWith(fontSize: 16);
+  static TextStyle get regular16 => _baseTextStyle.copyWith(
+        fontSize: 16.sp,
+      );
 
   ///NunitoSans light 16
   static TextStyle get light16 =>
@@ -92,7 +98,9 @@ abstract class AppTextStyle {
       regular16.copyWith(fontWeight: AppFontWeight.bold);
 
   ///NunitoSans 18
-  static TextStyle get regular18 => _baseTextStyle.copyWith(fontSize: 18);
+  static TextStyle get regular18 => _baseTextStyle.copyWith(
+        fontSize: 18.sp,
+      );
 
   ///NunitoSans semibold 18
   static TextStyle get semibold18 =>
@@ -103,7 +111,9 @@ abstract class AppTextStyle {
       regular18.copyWith(fontWeight: AppFontWeight.bold);
 
   ///NunitoSans 20
-  static TextStyle get regular20 => _baseTextStyle.copyWith(fontSize: 20);
+  static TextStyle get regular20 => _baseTextStyle.copyWith(
+        fontSize: 20.sp,
+      );
 
   ///NunitoSans medium 20
   static TextStyle get medium20 =>
@@ -124,7 +134,7 @@ abstract class AppTextStyle {
   ///NunitoSans bold 24
   static TextStyle get semibold24 => regular16.copyWith(
         fontWeight: AppFontWeight.semiBold,
-        fontSize: 24.spMin,
+        fontSize: 24.sp,
       );
 }
 

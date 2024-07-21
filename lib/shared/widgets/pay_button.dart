@@ -10,7 +10,8 @@ enum PayButtonStyle {
 
 class PayButton extends StatelessWidget {
   final VoidCallback? onPressed;
-  final String text;
+  final String? text;
+  final Widget? child;
   final double radius;
   final double height;
   final double? width;
@@ -22,12 +23,14 @@ class PayButton extends StatelessWidget {
   final TextAlign? textAlign;
   final bool expanded;
   final PayButtonStyle buttonStyle;
+  final EdgeInsets? padding;
   const PayButton({
     super.key,
-    required this.text,
+    this.text,
     this.onPressed,
+    this.child,
     this.radius = 200,
-    this.height = 50,
+    this.height = 40,
     this.elevation = 0,
     this.borderColor,
     this.width,
@@ -37,7 +40,8 @@ class PayButton extends StatelessWidget {
     this.textAlign,
     this.expanded = true,
     this.buttonStyle = PayButtonStyle.normal,
-  });
+    this.padding,
+  }) : assert(text != null || child != null);
 
   @override
   Widget build(BuildContext context) {
@@ -48,6 +52,7 @@ class PayButton extends StatelessWidget {
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           elevation: elevation,
+          padding: padding,
           backgroundColor: backgroundColor ?? AppColors.primary,
           shape: buttonStyle == PayButtonStyle.circular
               ? CircleBorder(
@@ -66,16 +71,15 @@ class PayButton extends StatelessWidget {
                         ),
                 ),
         ),
-        child: Text(
-          text,
-          textAlign: textAlign,
-          style: style ??
-              AppTextStyle.extraBold20.copyWith(
-                fontFamily: AppTextStyle.fontFamilyTertiary,
-                color: textColor ?? Colors.white,
-                fontSize: 14,
-              ),
-        ),
+        child: child ??
+            Text(
+              text!,
+              textAlign: textAlign,
+              style: style ??
+                  AppTextStyle.semibold14.copyWith(
+                    color: textColor ?? Colors.white,
+                  ),
+            ),
       ),
     );
   }

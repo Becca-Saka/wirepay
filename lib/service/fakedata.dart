@@ -7,7 +7,7 @@ final fakeBalanceData = [
   },
   {
     'icon': 'assets/images/gh.png',
-    'name': 'GHC',
+    'name': 'GHS',
     'balance': 5000,
     'currency': '₵',
   },

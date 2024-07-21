@@ -26,7 +26,7 @@ class PayTextButton extends StatelessWidget {
     required this.text,
     this.onPressed,
     this.height = 50,
-    this.width = 50,
+    this.width,
     this.textColor,
     this.style,
     this.textAlign,
@@ -52,8 +52,7 @@ class PayTextButton extends StatelessWidget {
               style: style ??
                   AppTextStyle.medium14.merge(
                     TextStyle(
-                      fontFamily: AppTextStyle.fontFamilyTertiary,
-                      decorationThickness: 2,
+                      decorationThickness: 1,
                       decorationColor: textColor ?? AppColors.primary,
                       color: buttonStyle == PayTextButtonStyle.underlined
                           ? Colors.transparent
@@ -65,7 +64,7 @@ class PayTextButton extends StatelessWidget {
                           ? [
                               Shadow(
                                 color: textColor ?? AppColors.primary,
-                                offset: const Offset(0, -1.8),
+                                offset: const Offset(0, -0.5),
                               )
                             ]
                           : null,

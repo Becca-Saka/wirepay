@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:wirepay/app/app_routes.dart';
-import 'package:wirepay/home_view.dart';
+import 'package:wirepay/shared/app_colors.dart';
 import 'package:wirepay/shared/app_text_style.dart';
 import 'package:wirepay/shared/widgets/app_icons.dart';
 import 'package:wirepay/shared/widgets/gradient_scaffold.dart';
 import 'package:wirepay/shared/widgets/pay_button.dart';
 import 'package:wirepay/shared/widgets/pay_text_button.dart';
+
+import '../shared/widgets/pay_border.dart';
 
 class SignInView extends StatelessWidget {
   const SignInView({super.key});
@@ -19,7 +21,7 @@ class SignInView extends StatelessWidget {
             child: Center(
                 child: AppIcons(
               icon: AppIconData.faceScan,
-              size: 120,
+              size: 130,
             )),
           ),
           Align(
@@ -41,7 +43,7 @@ class SignInView extends StatelessWidget {
                       'Welcome back, Miracle',
                       textAlign: TextAlign.center,
                       style: AppTextStyle.bold20.copyWith(
-                        fontFamily: AppTextStyle.fontFamilySecondary,
+                        fontFamily: AppTextStyle.fontBrico,
                         fontSize: 32,
                       ),
                     ),
@@ -55,12 +57,13 @@ class SignInView extends StatelessWidget {
                   PayButton(
                     text: 'Sign in with Face ID',
                     onPressed: () {
-//TODO: face id
+                      Navigator.of(context).pushNamed(AppRoutes.homeView);
                     },
                   ),
                   PayTextButton(
                     width: double.infinity,
                     text: 'Sign in with PIN code',
+                    textColor: AppColors.darkText,
                     onPressed: () {
                       Navigator.of(context).pushNamed(AppRoutes.welcomeBack);
                     },

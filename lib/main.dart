@@ -23,7 +23,7 @@ class MainApp extends StatelessWidget {
           title: 'Wirepay',
           theme: ThemeData(
             primaryColor: AppColors.primary,
-            fontFamily: AppTextStyle.fontFamily,
+            fontFamily: AppTextStyle.fontNunito,
           ),
           initialRoute: AppRouter.initialRoute,
           onGenerateRoute: AppRouter.onGenerateRoute,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wirepay/home_view.dart';
-import 'package:wirepay/sign_in_view.dart';
-import 'package:wirepay/welcome_back_view.dart';
+import 'package:wirepay/ui/home_view.dart';
+import 'package:wirepay/ui/sign_in_view.dart';
+import 'package:wirepay/ui/welcome_back_view.dart';
 
 class AppRoutes {
   static const String homeView = '/homeView';

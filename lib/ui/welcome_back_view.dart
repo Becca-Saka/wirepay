@@ -55,7 +55,7 @@ class _WelcomeBackViewState extends State<WelcomeBackView> {
                   Text(
                     'Hi, \$miracle ✨',
                     style: AppTextStyle.bold20.copyWith(
-                      fontFamily: AppTextStyle.fontFamilySecondary,
+                      fontFamily: AppTextStyle.fontBrico,
                       fontSize: 32,
                       color: Colors.white,
                     ),
@@ -168,7 +168,7 @@ class KeypadButton extends StatelessWidget {
       width: 52,
       onPressed: onPressed,
       style: AppTextStyle.medium20.copyWith(
-        fontFamily: AppTextStyle.fontFamilyTertiary,
+        fontFamily: AppTextStyle.fontAvenir,
         color: Colors.white,
         fontSize: 24,
       ),
