@@ -13,6 +13,7 @@ class AppIconData {
   static const String stash = '${_basePath}stash.svg';
   static const String viewOff = '${_basePath}view_off.svg';
   static const String wirepayIcon = '${_basePath}wirepay_icon.svg';
+  static const String forwardArrow = '${_basePath}forward_arrow.svg';
 }
 
 class AppIcons extends StatelessWidget {

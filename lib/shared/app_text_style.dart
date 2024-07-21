@@ -5,12 +5,15 @@ import 'app_colors.dart';
 
 abstract class AppTextStyle {
   static const String fontFamily = 'NunitoSans';
+  static const String fontFamilySecondary = 'BricolageGrotesque';
+  static const String fontFamilyTertiary = 'AvenirLTStd';
 
   /// Base text style
   static const TextStyle _baseTextStyle = TextStyle(
     fontFamily: 'NunitoSans',
     fontWeight: AppFontWeight.regular,
     color: AppColors.darkText,
+    letterSpacing: -0.2,
   );
 
   ///NunitoSans 10
@@ -80,6 +83,10 @@ abstract class AppTextStyle {
   static TextStyle get semibold16 =>
       regular16.copyWith(fontWeight: AppFontWeight.semiBold);
 
+  ///NunitoSans extrabold 16
+  static TextStyle get extrabold16 =>
+      regular16.copyWith(fontWeight: AppFontWeight.extraBold);
+
   ///NunitoSans bold 16
   static TextStyle get bold16 =>
       regular16.copyWith(fontWeight: AppFontWeight.bold);
@@ -109,6 +116,10 @@ abstract class AppTextStyle {
   ///NunitoSans bold 20
   static TextStyle get bold20 =>
       regular20.copyWith(fontWeight: AppFontWeight.bold);
+
+  ///NunitoSans extra bold 20
+  static TextStyle get extraBold20 =>
+      regular20.copyWith(fontWeight: AppFontWeight.extraBold);
 
   ///NunitoSans bold 24
   static TextStyle get semibold24 => regular16.copyWith(
