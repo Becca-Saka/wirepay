@@ -1,0 +1,5 @@
+package com.adire.wirepay
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity()
