@@ -184,7 +184,7 @@ class _HomeViewState extends State<HomeView> {
                 header: 'Get started',
                 suffix: PayTextButton(
                   text: 'View all steps',
-                  buttonStyle: PayButtonStyle.underlined,
+                  buttonStyle: PayTextButtonStyle.underlined,
                   onPressed: () {},
                 ),
                 child: PayBorder(
@@ -411,7 +411,7 @@ class _HomeViewState extends State<HomeView> {
                                 text: info.buttonText,
                                 padding: EdgeInsets.zero,
                                 suffixIcon: AppIconData.forwardArrow,
-                                buttonStyle: PayButtonStyle.underlined,
+                                buttonStyle: PayTextButtonStyle.underlined,
                                 onPressed: () {},
                               ),
                             ),

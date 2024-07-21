@@ -5,7 +5,7 @@ import 'package:wirepay/shared/app_text_style.dart';
 import 'package:wirepay/shared/widgets/app_icons.dart';
 import 'package:wirepay/shared/widgets/app_spacing.dart';
 
-enum PayButtonStyle {
+enum PayTextButtonStyle {
   normal,
   underlined,
 }
@@ -18,7 +18,7 @@ class PayTextButton extends StatelessWidget {
   final Color? textColor;
   final TextStyle? style;
   final TextAlign? textAlign;
-  final PayButtonStyle buttonStyle;
+  final PayTextButtonStyle buttonStyle;
   final EdgeInsets? padding;
   final String? suffixIcon;
   const PayTextButton({
@@ -30,7 +30,7 @@ class PayTextButton extends StatelessWidget {
     this.textColor,
     this.style,
     this.textAlign,
-    this.buttonStyle = PayButtonStyle.normal,
+    this.buttonStyle = PayTextButtonStyle.normal,
     this.padding,
     this.suffixIcon,
   });
@@ -55,13 +55,13 @@ class PayTextButton extends StatelessWidget {
                       fontFamily: AppTextStyle.fontFamilyTertiary,
                       decorationThickness: 2,
                       decorationColor: textColor ?? AppColors.primary,
-                      color: buttonStyle == PayButtonStyle.underlined
+                      color: buttonStyle == PayTextButtonStyle.underlined
                           ? Colors.transparent
                           : textColor ?? AppColors.primary,
-                      decoration: buttonStyle == PayButtonStyle.underlined
+                      decoration: buttonStyle == PayTextButtonStyle.underlined
                           ? TextDecoration.underline
                           : null,
-                      shadows: buttonStyle == PayButtonStyle.underlined
+                      shadows: buttonStyle == PayTextButtonStyle.underlined
                           ? [
                               Shadow(
                                 color: textColor ?? AppColors.primary,

@@ -3,6 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wirepay/shared/app_colors.dart';
 import 'package:wirepay/shared/app_text_style.dart';
 
+enum PayButtonStyle {
+  normal,
+  circular,
+}
+
 class PayButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final String text;
@@ -16,6 +21,7 @@ class PayButton extends StatelessWidget {
   final TextStyle? style;
   final TextAlign? textAlign;
   final bool expanded;
+  final PayButtonStyle buttonStyle;
   const PayButton({
     super.key,
     required this.text,
@@ -30,6 +36,7 @@ class PayButton extends StatelessWidget {
     this.style,
     this.textAlign,
     this.expanded = true,
+    this.buttonStyle = PayButtonStyle.normal,
   });
 
   @override
@@ -42,13 +49,22 @@ class PayButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           elevation: elevation,
           backgroundColor: backgroundColor ?? AppColors.primary,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(radius),
-              side: borderColor == null
-                  ? BorderSide.none
-                  : BorderSide(
-                      color: borderColor!,
-                    )),
+          shape: buttonStyle == PayButtonStyle.circular
+              ? CircleBorder(
+                  side: borderColor == null
+                      ? BorderSide.none
+                      : BorderSide(
+                          color: borderColor!,
+                        ),
+                )
+              : RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(radius),
+                  side: borderColor == null
+                      ? BorderSide.none
+                      : BorderSide(
+                          color: borderColor!,
+                        ),
+                ),
         ),
         child: Text(
           text,

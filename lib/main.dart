@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wirepay/app/app_routes.dart';
 import 'package:wirepay/shared/app_colors.dart';
 import 'package:wirepay/shared/app_text_style.dart';
-
-import 'sign_in_view.dart';
 
 void main() {
   runApp(const MainApp());
@@ -20,13 +19,14 @@ class MainApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (_, child) {
         return MaterialApp(
-          home: const SignUpView(),
           debugShowCheckedModeBanner: false,
           title: 'Wirepay',
           theme: ThemeData(
             primaryColor: AppColors.primary,
             fontFamily: AppTextStyle.fontFamily,
           ),
+          initialRoute: AppRouter.initialRoute,
+          onGenerateRoute: AppRouter.onGenerateRoute,
         );
       },
     );

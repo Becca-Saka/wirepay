@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wirepay/app/app_routes.dart';
 import 'package:wirepay/home_view.dart';
 import 'package:wirepay/shared/app_text_style.dart';
 import 'package:wirepay/shared/widgets/app_icons.dart';
@@ -6,8 +7,8 @@ import 'package:wirepay/shared/widgets/gradient_scaffold.dart';
 import 'package:wirepay/shared/widgets/pay_button.dart';
 import 'package:wirepay/shared/widgets/pay_text_button.dart';
 
-class SignUpView extends StatelessWidget {
-  const SignUpView({super.key});
+class SignInView extends StatelessWidget {
+  const SignInView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,14 +22,6 @@ class SignUpView extends StatelessWidget {
               size: 120,
             )),
           ),
-          // const SafeArea(
-          //   child: Center(
-          //     child: Text(
-          //       'Sign Up',
-          //     ),
-          //   ),
-          // ),
-          // const Spacer(),
           Align(
             alignment: Alignment.bottomCenter,
             child: PayBorder(
@@ -61,12 +54,16 @@ class SignUpView extends StatelessWidget {
                   const Spacer(),
                   PayButton(
                     text: 'Sign in with Face ID',
-                    onPressed: () {},
+                    onPressed: () {
+//TODO: face id
+                    },
                   ),
                   PayTextButton(
                     width: double.infinity,
                     text: 'Sign in with PIN code',
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(AppRoutes.welcomeBack);
+                    },
                   ),
                 ],
               ),
