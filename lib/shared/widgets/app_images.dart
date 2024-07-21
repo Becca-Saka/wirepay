@@ -8,37 +8,41 @@ class AppImageData {
   static const String user = '${_basePath}user.png';
 }
 
-class AppImages extends StatefulWidget {
+class AppImages extends StatelessWidget {
   final String? path;
-
+  final VoidCallback? onPressed;
   final double? height;
   final double? width;
   final BoxFit? fit;
-  const AppImages({this.path, this.height, this.width, this.fit, super.key})
-      : assert(path != null);
+  const AppImages({
+    super.key,
+    this.path,
+    this.height,
+    this.width,
+    this.fit,
+    this.onPressed,
+  }) : assert(path != null);
 
-  @override
-  State<AppImages> createState() => _AppImagesState();
-}
-
-class _AppImagesState extends State<AppImages> {
   @override
   Widget build(BuildContext context) {
-    return Image.asset(
-      widget.path!,
-      height: widget.height,
-      width: widget.width,
-      fit: widget.fit,
-      errorBuilder: (context, error, stackTrace) {
-        return _errorWidget();
-      },
+    return InkWell(
+      onTap: onPressed,
+      child: Image.asset(
+        path!,
+        height: height,
+        width: width,
+        fit: fit,
+        errorBuilder: (context, error, stackTrace) {
+          return _errorWidget();
+        },
+      ),
     );
   }
 
   Widget _errorWidget() {
     return Container(
-      height: widget.height,
-      width: widget.width,
+      height: height,
+      width: width,
       color: Colors.grey.withOpacity(0.4),
       child: const Center(
         child: Icon(

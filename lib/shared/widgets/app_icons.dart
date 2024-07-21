@@ -41,25 +41,3 @@ class AppIcons extends StatelessWidget {
     );
   }
 }
-
-class AppImages extends StatelessWidget {
-  final VoidCallback? onPressed;
-  final String icon;
-  const AppImages({
-    super.key,
-    this.onPressed,
-    required this.icon,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onPressed,
-      child: Image.asset(
-        icon,
-        height: 35.0,
-        width: 35.0,
-      ),
-    );
-  }
-}
