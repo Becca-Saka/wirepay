@@ -4,7 +4,7 @@ This Flutter project replicates the user interface for the Passcode Screen and H
 
 ## APK Download
 
-You can download the installable APK from [this link](insert_your_apk_download_link_here).
+You can download the installable APK from [this link](insert__apk_download_link_here).
 
 Alternatively, you can find the APK file in the `apk` folder of this repository.
 
