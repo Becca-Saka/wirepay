@@ -4,7 +4,7 @@ This Flutter project replicates the user interface for the Passcode Screen and H
 
 ## APK Download
 
-You can download the installable APK from [this link](insert__apk_download_link_here).
+You can download the installable APK from [this link](https://github.com/Becca-Saka/wirepay/blob/main/apk/app-release.apk).
 
 Alternatively, you can find the APK file in the `apk` folder of this repository.
 
@@ -15,10 +15,10 @@ To run this application, follow these steps:
 1. Ensure you have Flutter installed on your machine. If not, follow the [official Flutter installation guide](https://flutter.dev/docs/get-started/install).
 
 2. Clone this repository:
-git clone https://github.com/yourusername/wirepay-ui-replication.git
+`git clone https://github.com/Becca-Saka/wirepay`
 
 3. Navigate to the project directory:
-cd wirepay-ui-replication
+cd wirepay
 
 4. Get the dependencies:
 `flutter pub get`
